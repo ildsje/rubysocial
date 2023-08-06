@@ -1,6 +1,6 @@
 name: Test
-  on: [push]
-  jobs:
+on: [push]
+jobs:
     test-backend:
       services:
         db:
@@ -17,7 +17,7 @@ name: Test
           uses: ruby/setup-ruby@v1
           with:
             bundler-cache: true
-        - uses: borales/actions-yarn@v2.3.0
+        - uses: borales/actions-yarn@v3.0.0
           with:
             cmd: install
         - name: Run tests
